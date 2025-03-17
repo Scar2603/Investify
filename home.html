@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investify - Home</title>
+    <link rel="stylesheet" href="home-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Assets/logo.jpg" alt="Investify">
+            <span>Investify</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Transactions</a></li>
+        </ul>
+        <!-- Welcome Message -->
+        <div class="welcome-message">
+            <span id="welcomeText"></span>
+        </div>
+        <!-- Logout Button -->
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </nav>
+
+
+    <div class="container">
+        <div class="stocks">
+            <h1 id="Stocks-heading">Stocks</h1>
+
+            <!-- Indices Section -->
+            <div class="indices">
+                <h3>Indices</h3>
+                <div class="indices-list">
+                    <div class="index-card">
+                        <span class="index-name">NIFTY</span>
+                        <span class="index-value">22,337</span>
+                        <span class="index-change positive">+254.65 (1.15%)</span>
+                    </div>
+                    <div class="index-card">
+                        <span class="index-name">SENSEX</span>
+                        <span class="index-value">73,730.23</span>
+                        <span class="index-change positive">+740.30 (1.01%)</span>
+                    </div>
+                    <div class="index-card">
+                        <span class="index-name">BANKNIFTY</span>
+                        <span class="index-value">48,489.95</span>
+                        <span class="index-change positive">+244.75 (0.51%)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Most Traded Section -->
+            <div class="most-traded">
+                <h3>Most Traded in Investify</h3>
+                <div class="stocks-list">
+                    <div class="stock-card">
+                        <span class="stock-name">Coforge</span>
+                        <span class="stock-price">7,814.20</span>
+                        <span class="stock-change positive">+601.80 (8.34%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">BSE</span>
+                        <span class="stock-price">4,299.10</span>
+                        <span class="stock-change negative">-154.55 (3.47%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">IIFL Finance</span>
+                        <span class="stock-price">313.70</span>
+                        <span class="stock-change positive">+30.10 (10.61%)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stocks in News Section -->
+            <div class="stocks-news">
+                <h3>Stocks in News</h3>
+                <div class="stocks-list">
+                    <div class="stock-card">
+                        <span class="stock-name">ICRA</span>
+                        <span class="stock-price">5,234.40</span>
+                        <span class="stock-change negative">-118.80 (2.22%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">Coal India</span>
+                        <span class="stock-price">368.25</span>
+                        <span class="stock-change positive">+4.40 (1.21%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">Railtel Corp</span>
+                        <span class="stock-price">289.45</span>
+                        <span class="stock-change positive">+8.25 (2.93%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">IRFC</span>
+                        <span class="stock-price">117.73</span>
+                        <span class="stock-change positive">+3.14 (2.74%)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- See All Stocks Section -->
+            <div class="see-all-stocks">
+                <h3 class="see-all-heading" id="stocksSeeAll">See All Stocks</h3>
+                <div class="extra-stocks-list" id="extraStocksList" style="display: none;">
+                    <div class="stock-card">
+                        <span class="stock-name">RELIANCE</span>
+                        <span class="stock-price">₹2,423.00</span>
+                        <span class="stock-change positive">+12.30 (0.51%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">TCS</span>
+                        <span class="stock-price">₹3,506.20</span>
+                        <span class="stock-change negative">-69.10 (1.93%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">INFY</span>
+                        <span class="stock-price">₹1,590.85</span>
+                        <span class="stock-change negative">-70.75 (4.26%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">HDFCBANK</span>
+                        <span class="stock-price">₹1,711.15</span>
+                        <span class="stock-change positive">+25.65 (1.52%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">ICICIBANK</span>
+                        <span class="stock-price">₹1,243.95</span>
+                        <span class="stock-change negative">-1.45 (0.12%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">LT</span>
+                        <span class="stock-price">₹3,193.65</span>
+                        <span class="stock-change negative">-1.80 (0.06%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">BAJFINANCE</span>
+                        <span class="stock-price">₹8,484.45</span>
+                        <span class="stock-change positive">+144.00 (1.73%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">HINDUNILVR</span>
+                        <span class="stock-price">₹2,192.90</span>
+                        <span class="stock-change negative">-24.05 (1.08%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">MARUTI</span>
+                        <span class="stock-price">₹9,123.50</span>
+                        <span class="stock-change positive">+45.30 (0.50%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">AXISBANK</span>
+                        <span class="stock-price">₹1,002.75</span>
+                        <span class="stock-change positive">+10.25 (1.03%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">KOTAKBANK</span>
+                        <span class="stock-price">₹2,224.40</span>
+                        <span class="stock-change negative">-30.15 (1.34%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">TATAMOTORS</span>
+                        <span class="stock-price">₹570.25</span>
+                        <span class="stock-change positive">+6.50 (1.15%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">SBIN</span>
+                        <span class="stock-price">₹540.15</span>
+                        <span class="stock-change positive">+3.60 (0.67%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">ASIANPAINT</span>
+                        <span class="stock-price">₹3,078.80</span>
+                        <span class="stock-change negative">-42.20 (1.35%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">SUNPHARMA</span>
+                        <span class="stock-price">₹1,020.45</span>
+                        <span class="stock-change positive">+18.75 (1.87%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">HCLTECH</span>
+                        <span class="stock-price">₹1,135.95</span>
+                        <span class="stock-change negative">-20.85 (1.80%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">NTPC</span>
+                        <span class="stock-price">₹181.35</span>
+                        <span class="stock-change positive">+2.00 (1.12%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">WIPRO</span>
+                        <span class="stock-price">₹392.25</span>
+                        <span class="stock-change negative">-3.15 (0.80%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">M&M</span>
+                        <span class="stock-price">₹1,280.35</span>
+                        <span class="stock-change positive">+12.50 (0.98%)</span>
+                    </div>
+                    <div class="stock-card">
+                        <span class="stock-name">POWERGRID</span>
+                        <span class="stock-price">₹226.45</span>
+                        <span class="stock-change positive">+1.15 (0.51%)</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+
+        <!-- Mutual Funds Section -->
+        <div class="mutual-funds">
+            <h1>Mutual Funds</h1>
+
+            <!-- Popular Funds Section -->
+            <div class="popular-funds">
+                <h3>Popular Funds</h3>
+                <div class="funds-list">
+                    <div class="fund-card">
+                        <span class="fund-name">Motilal Oswal Midcap Fund</span>
+                        <span class="fund-return">29.9% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">Parag Parikh Flexi Cap Fund</span>
+                        <span class="fund-return">18.7% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">Nippon India Large Cap Fund</span>
+                        <span class="fund-return">19.9% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">Quant Small Cap Fund</span>
+                        <span class="fund-return">21.9% <small>(3Y)</small></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- See All Mutual Funds Section -->
+            <div class="see-all-funds">
+                <h3 class="see-all-heading" id="fundsSeeAll">See All Mutual Funds</h3>
+                <div class="extra-funds-list" id="extraFundsList" style="display: none;">
+                    <div class="fund-card">
+                        <span class="fund-name">SBI Bluechip Fund</span>
+                        <span class="fund-return">21.3% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">HDFC Top 100 Fund</span>
+                        <span class="fund-return">18.4% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">ICICI Prudential Value Discovery Fund</span>
+                        <span class="fund-return">20.2% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">Mirae Asset Large Cap Fund</span>
+                        <span class="fund-return">19.1% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">Kotak Flexicap Fund</span>
+                        <span class="fund-return">19.6% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">Axis Long Term Equity Fund</span>
+                        <span class="fund-return">17.8% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">UTI Nifty Index Fund</span>
+                        <span class="fund-return">16.3% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">Nippon India Small Cap Fund</span>
+                        <span class="fund-return">28.4% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">Parag Parikh Flexi Cap Fund</span>
+                        <span class="fund-return">22.1% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">SBI Magnum Midcap Fund</span>
+                        <span class="fund-return">26.3% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">HDFC Hybrid Equity Fund</span>
+                        <span class="fund-return">14.7% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">ICICI Prudential Balanced Advantage Fund</span>
+                        <span class="fund-return">13.2% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">DSP Tax Saver Fund</span>
+                        <span class="fund-return">18.9% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">Motilal Oswal NASDAQ 100 Fund</span>
+                        <span class="fund-return">12.5% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">Aditya Birla Sun Life Tax Relief 96</span>
+                        <span class="fund-return">17.4% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">Nippon India ETF Gold BeES</span>
+                        <span class="fund-return">10.5% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">Tata Balanced Advantage Fund</span>
+                        <span class="fund-return">13.9% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">SBI Debt Fund</span>
+                        <span class="fund-return">7.8% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">ICICI Prudential Corporate Bond Fund</span>
+                        <span class="fund-return">8.4% <small>(3Y)</small></span>
+                    </div>
+                    <div class="fund-card">
+                        <span class="fund-name">HDFC Money Market Fund</span>
+                        <span class="fund-return">5.3% <small>(3Y)</small></span>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Investify</h4>
+                <p>Your trusted investment platform.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Transactions</a></li>
+                    <!-- <li><a href="#">Market Trends</a></li> -->
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@investify.com</p>
+                <p>Phone: +91 1111111111</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Investify. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="home.js" defer></script>
+</body>
+
+</html>

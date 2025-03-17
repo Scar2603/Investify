@@ -1,0 +1,295 @@
+body {
+    font-family: "Quicksand", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333;
+
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+    background-image: url('Assets/background.jpg');  /* Main Background Image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 72vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.login-register {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Login/Register Button*/
+.login-register button {
+    background: linear-gradient(135deg, #43cea2, #185a9d); /* Gradient background */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 12px 25px; /* Adjusted padding */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover Effect for Login/Register Button */
+.login-register button:hover {
+    background: linear-gradient(135deg, #185a9d, #43cea2); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slight lift */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Active State for Login/Register Button */
+.login-register button:active {
+    transform: translateY(2px); /* Pressed down effect */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+
+
+.headline {
+    font-family: "Quicksand", sans-serif;
+    font-size: 65px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-family: "Quicksand", sans-serif;
+    font-style: bold;
+    font-size: 20px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+/* Get Started Button*/
+.get-started {
+    background: linear-gradient(135deg, #43cea2, #185a9d); /* Gradient background */
+    color: #ffffff; /* White text */
+    border: none; /* No border */
+    padding: 15px 35px; /* Larger padding for emphasis */
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px; /* Fully rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover Effect for Get Started Button */
+.get-started:hover {
+    background: linear-gradient(135deg, #185a9d, #43cea2); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slight lift */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Active State for Get Started Button */
+.get-started:active {
+    transform: translateY(2px); /* Pressed down effect */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+
+
+
+/* Login Popup Css */
+/* Popup Container */
+.popup {
+    display: none; /* Initial Display */
+    position: fixed;
+    z-index: 1; /* For appearing on top */
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+    backdrop-filter: blur(8px); /* Stronger blur for a modern effect */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 0.5s ease; /* Smooth fade-in animation */
+}
+
+/* Login Popup Content Styling */
+#loginpopup .popup-content {
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* Gradient Light Teal */
+    margin: 10% auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 15px; /* Softer corners */
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Register Popup Content Styling */
+#registerPopup .popup-content {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Gradient Light Aqua */
+    position: fixed; /* Fixed position for centering */
+    top: 50%; /* Vertically centered */
+    left: 50%; /* Horizontally centered */
+    transform: translate(-50%, -50%); /* Adjust to center accurately */
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 15px; /* Softer corners */
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border: 2px solid #0288d1; /* Medium Blue Border */
+}
+
+/* Title Styling for Login and Register */
+#loginpopup .popup-content h2,
+#registerPopup .popup-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px; /* Slightly spaced letters */
+}
+
+#loginpopup .popup-content h2 {
+    color: #00796b; /* Teal */
+}
+
+#registerPopup .popup-content h2 {
+    color: #01579b; /* Medium Blue */
+}
+
+/* Input Fields */
+.popup-content input {
+    width: 63%; /* Increased width for modern look */
+    padding: 12px;
+    border: none;
+    border-bottom: 3px solid #888; /* Thicker line for bold effect */
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease; /* Smooth transition for focus */
+}
+
+.popup-content input:focus {
+    border-bottom: 3px solid #00796b; /* Highlight on focus for Login */
+}
+
+#registerPopup .popup-content input:focus {
+    border-bottom: 3px solid #0288d1; /* Highlight on focus for Register */
+}
+
+/* Labels */
+.popup-content label {
+    font-size: 18px;
+    color: #333; /* Slight gray for readability */
+    margin-bottom: 10px;
+}
+
+/* Buttons Styling */
+#loginpopup .popup-content button,
+#registerPopup .popup-content button {
+    width: 80%;
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 50px; /* Fully rounded buttons */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#loginpopup .popup-content button {
+    background: linear-gradient(135deg, #43cea2, #185a9d); /* Blue-Green Gradient */
+}
+
+#loginpopup .popup-content button:hover {
+    background: linear-gradient(135deg, #185a9d, #43cea2); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slight lift */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+#registerPopup .popup-content button {
+    background: linear-gradient(135deg, #0288d1, #01579b); /* Medium Blue Gradient */
+}
+
+#registerPopup .popup-content button:hover {
+    background: linear-gradient(135deg, #01579b, #0288d1); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Slight lift */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+/* Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.close:hover {
+    color: #000; /* Darker color on hover */
+}
+
+/* Links Inside Popups */
+.popup-content a {
+    color: #00796b; /* Teal for Login */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#registerPopup .popup-content a {
+    color: #0288d1; /* Medium Blue */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.popup-content a:hover {
+    text-decoration: underline;
+    opacity: 0.8; /* Slight fade effect */
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
