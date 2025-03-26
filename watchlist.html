@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchlist</title>
+    <link rel="stylesheet" href="watchlist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Assets/logo.jpg" alt="Investify">
+            <span>Investify</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="watchlist.html">Watchlist</a></li>
+            <li><a href="transactions.html">Transactions</a></li>
+        </ul>
+        <div class="welcome-message">
+            <span id="welcomeText"></span>
+        </div>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </nav>
+
+
+    <main>
+        <div class="watchlists-container">
+            <h1>Your Watchlists</h1>
+            
+            <!-- Watchlist Card: My Watchlist -->
+            <div class="watchlist-card" onclick="toggleWatchlist(this)">
+                <span class="watchlist-name">My Watchlist</span>
+            </div>
+            <ul class="stocks-list">
+                <li>Coforge (COFORGE) - ₹7,814.20 <span class="stock-change positive">+601.80 (8.34%)</span></li>
+                <li>IRFC (IRFC) - ₹117.73 <span class="stock-change positive">+3.14 (2.74%)</span></li>
+                <li>TCS (TCS) - ₹3,506.20 <span class="stock-change negative">-69.10 (1.93%)</span></li>
+                <li>Infosys (INFY) - ₹1,590.85 <span class="stock-change negative">-70.75 (4.26%)</span></li>
+                <li>Wipro (WIPRO) - ₹392.25 <span class="stock-change negative">-3.15 (0.80%)</span></li>
+                <li>HDFC Bank (HDFCBANK) - ₹1,711.15 <span class="stock-change positive">+25.65 (1.52%)</span></li>
+                <li>Reliance (RELIANCE) - ₹2,423.00 <span class="stock-change positive">+12.30 (0.51%)</span></li>
+                <li>Tata Motors (TATAMOTORS) - ₹570.25 <span class="stock-change positive">+6.50 (1.15%)</span></li>
+            </ul>
+    
+            <!-- Watchlist Card: Growth Stocks -->
+            <div class="watchlist-card" onclick="toggleWatchlist(this)">
+                <span class="watchlist-name">Growth Stocks</span>
+            </div>
+            <ul class="stocks-list">
+                <li>IRFC (IRFC) - ₹117.73 <span class="stock-change positive">+3.14 (2.74%)</span></li>
+                <li>Coal India (COALINDIA) - ₹368.25 <span class="stock-change positive">+4.40 (1.21%)</span></li>
+                <li>Railtel (RAILTEL) - ₹289.45 <span class="stock-change positive">+8.25 (2.93%)</span></li>
+                <li>Tata Motors (TATAMOTORS) - ₹570.25 <span class="stock-change positive">+6.50 (1.15%)</span></li>
+                <li>Hindustan Unilever (HINDUNILVR) - ₹2,192.90 <span class="stock-change negative">-24.05 (1.08%)</span></li>
+            </ul>
+    
+            <!-- Watchlist Card: Blue-Chip Stocks -->
+            <div class="watchlist-card" onclick="toggleWatchlist(this)">
+                <span class="watchlist-name">Blue-Chip Stocks</span>
+            </div>
+            <ul class="stocks-list">
+                <li>Reliance (RELIANCE) - ₹2,423.00 <span class="stock-change positive">+12.30 (0.51%)</span></li>
+                <li>HDFC Bank (HDFCBANK) - ₹1,711.15 <span class="stock-change positive">+25.65 (1.52%)</span></li>
+                <li>ICICI Bank (ICICIBANK) - ₹1,243.95 <span class="stock-change negative">-1.45 (0.12%)</span></li>
+                <li>SBI (SBIN) - ₹540.15 <span class="stock-change positive">+3.60 (0.67%)</span></li>
+                <li>Infosys (INFY) - ₹1,590.85 <span class="stock-change negative">-70.75 (4.26%)</span></li>
+            </ul>
+    
+            <!-- Watchlist Card: Dividend Earners -->
+            <div class="watchlist-card" onclick="toggleWatchlist(this)">
+                <span class="watchlist-name">Dividend Earners</span>
+            </div>
+            <ul class="stocks-list">
+                <li>Coal India (COALINDIA) - ₹368.25 <span class="stock-change positive">+4.40 (1.21%)</span></li>
+                <li>Hindustan Unilever (HINDUNILVR) - ₹2,192.90 <span class="stock-change negative">-24.05 (1.08%)</span></li>
+                <li>ICICI Bank (ICICIBANK) - ₹1,243.95 <span class="stock-change negative">-1.45 (0.12%)</span></li>
+                <li>NTPC (NTPC) - ₹181.35 <span class="stock-change positive">+2.00 (1.12%)</span></li>
+                <li>Powergrid (POWERGRID) - ₹226.45 <span class="stock-change positive">+1.15 (0.51%)</span></li>
+            </ul>
+    
+            <!-- Watchlist Card: Trending Now -->
+            <div class="watchlist-card" onclick="toggleWatchlist(this)">
+                <span class="watchlist-name">Trending Now</span>
+            </div>
+            <ul class="stocks-list">
+                <li>Coforge (COFORGE) - ₹7,814.20 <span class="stock-change positive">+601.80 (8.34%)</span></li>
+                <li>BSE (BSE) - ₹4,299.10 <span class="stock-change negative">-154.55 (3.47%)</span></li>
+                <li>IIFL Finance (IIFL) - ₹313.70 <span class="stock-change positive">+30.10 (10.61%)</span></li>
+                <li>ICRA (ICRA) - ₹5,234.40 <span class="stock-change negative">-118.80 (2.22%)</span></li>
+                <li>Railtel (RAILTEL) - ₹289.45 <span class="stock-change positive">+8.25 (2.93%)</span></li>
+            </ul>
+        </div>
+    </main>
+    
+    
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Investify</h4>
+                <p>Your trusted investment platform.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="watchlist.html">Watchlist</a></li>
+                    <li><a href="transactions.html">Transactions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@investify.com</p>
+                <p>Phone: +91 1111111111</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Investify. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="watchlist.js"></script>
+</body>
+
+</html>

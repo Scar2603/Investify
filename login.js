@@ -52,6 +52,7 @@ function clearRegisterFields() {
     document.getElementById("name").value = "";
     document.getElementById("newUsername").value = "";
     document.getElementById("newPassword").value = "";
+    document.getElementById("registerSubmit").value = "";
 }
 
 // Close register popup when clicking the close button
@@ -92,6 +93,7 @@ document.getElementById("registerSubmit").onclick = function (event) {
     const name = document.getElementById("name").value;
     const newUsername = document.getElementById("newUsername").value;
     const newPassword = document.getElementById("newPassword").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
 
     // Retrieve all registered usernames from localStorage
     let users = JSON.parse(localStorage.getItem("users")) || []; // Parse existing users or initialize empty array
@@ -99,18 +101,40 @@ document.getElementById("registerSubmit").onclick = function (event) {
     // Check if the username already exists
     const isUsernameTaken = users.some(user => user.username === newUsername);
 
+    const alertMessages = [];
+    if (!/[A-Z]/.test(newPassword)) {
+        alertMessages.push("Password must include at least one uppercase letter.");
+    }
+    if (!/\d/.test(newPassword)) {
+        alertMessages.push("Password must include at least one number.");
+    }
+    if (!/[@$!%*?&]/.test(newPassword)) {
+        alertMessages.push("Password must include at least one special character (@$!%*?&).");
+    }
+    if (newPassword.length < 8) {
+        alertMessages.push("Password must be at least 8 characters long.");
+    }
+
     if (isUsernameTaken) {
         alert("Username already taken. Please choose a different username.");
-    } else if (name && newUsername && newPassword) {
+    } else if (!name || !newUsername || !newPassword || !confirmPassword) {
+        alert("Please fill in all fields to register.");
+    } else if (alertMessages.length > 0) {
+        // Show all unmet password requirements
+        alert(alertMessages.join("\n"));
+    } else if (newPassword !== confirmPassword) {
+        alert("Passwords do not match. Please try again.");
+    } else {
         // Add the new user to the list of users
         users.push({ name: name, username: newUsername, password: newPassword });
         localStorage.setItem("users", JSON.stringify(users)); // Save updated list of users to localStorage
         alert("Registration successful! Please login now.");
         document.getElementById("registerPopup").style.display = "none"; // Close the popup
-    } else {
-        alert("Please fill in all fields to register.");
     }
 };
+
+
+
 
 
 

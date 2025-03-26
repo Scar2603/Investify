@@ -1,0 +1,243 @@
+/* General Styles */
+body {
+    font-family: "Quicksand", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Center Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0 auto; /* Center the nav-links */
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #28a745;
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Welcome Message */
+.welcome-message {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px; /* Adjust space between welcome message and logout button */
+    color: #007bff; /* Blue color for welcome message */
+    display: flex;
+    align-items: center; /* Align with the logout button */
+}
+
+/* Logout Button*/
+.logout-btn {
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff; /* White Text */
+    background: linear-gradient(135deg, #ff6f61, #d84315); /* Gradient Background */
+    border: none; /* Remove Border */
+    border-radius: 50px; /* Rounded Button */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth Transition */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+}
+
+/* Hover Effect for Logout Button */
+.logout-btn:hover {
+    background: linear-gradient(135deg, #d84315, #b71c1c); /* Darker Gradient on Hover */
+    transform: translateY(-2px); /* Slight Lift */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced Shadow on Hover */
+}
+
+/* Active State for Logout Button */
+.logout-btn:active {
+    transform: translateY(2px); /* Pressed Look */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+}
+
+
+/* Watchlists Container */
+.watchlists-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.watchlists-container h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Watchlist Card Styles */
+.watchlist-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.watchlist-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.watchlist-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Stocks List */
+.stocks-list {
+    display: none; /* Initially hidden */
+    padding: 10px 20px;
+    margin-top: -10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #28a745;
+    border-radius: 0 0 10px 10px;
+    list-style: none;
+}
+
+.stocks-list li {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Stock Price and Change */
+.stock-change {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.stock-change.positive {
+    color: #28a745; /* Green for positive change */
+}
+
+.stock-change.negative {
+    color: #d9534f; /* Red for negative change */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-section {
+    max-width: 300px;
+    text-align: left;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #01b286;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #01b286;
+}
+
+.footer-bottom {
+    background-color: #111;
+    padding: 10px;
+    font-size: 12px;
+    color: #aaa;
+}

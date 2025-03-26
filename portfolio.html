@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Assets/logo.jpg" alt="Investify">
+            <span>Investify</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="watchlist.html">Watchlist</a></li>
+            <li><a href="transactions.html">Transactions</a></li>
+        </ul>
+        <div class="welcome-message">
+            <span id="welcomeText"></span>
+        </div>
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </nav>
+
+    <main>
+        <h1>Your Portfolio</h1>
+        <div class="portfolio-summary">
+            <p><strong>Invested Value:</strong> ₹59,990</p>
+            <p><strong>Current Value:</strong> ₹65,900</p>
+            <p><strong>Total Returns:</strong> ₹5,910 (+9.85%)</p>
+            <p><strong>1D Returns:</strong> ₹400 (+0.67%)</p>
+        </div>
+    
+        <div class="stocks-list">
+            <div class="stock-card" style="background: rgb(216, 248, 216);">
+                <span class="stock-name">Coforge</span>
+                <span class="stock-quantity">Quantity: 3</span>
+                <span class="avg-price">Avg. Price: ₹7,200</span>
+                <span class="current-value">Current Value: ₹7,850</span>
+                <span class="stock-change positive">Total Change: <strong style="margin-left: 30px;">+₹1,950.00</strong></span>
+            </div>
+            <div class="stock-card" style="background: rgb(216, 248, 216);">
+                <span class="stock-name">IRFC</span>
+                <span class="stock-quantity">Quantity: 180</span>
+                <span class="avg-price">Avg. Price: ₹28</span>
+                <span class="current-value">Current Value: ₹33.25</span>
+                <span class="stock-change positive">Total Change: <strong style="margin-left: 30px;">+₹945.00</strong></span>
+            </div>
+            <div class="stock-card" style="background: rgb(216, 248, 216);">
+                <span class="stock-name">TCS</span>
+                <span class="stock-quantity">Quantity: 2</span>
+                <span class="avg-price">Avg. Price: ₹3,450</span>
+                <span class="current-value">Current Value: ₹3,520</span>
+                <span class="stock-change positive">Total Change: <strong style="margin-left: 30px;">+₹140.00</strong></span>
+            </div>
+            <div class="stock-card" style="background: rgb(255, 205, 205);">
+                <span class="stock-name">Infosys</span>
+                <span class="stock-quantity">Quantity: 6</span>
+                <span class="avg-price">Avg. Price: ₹1,580</span>
+                <span class="current-value">Current Value: ₹1,520</span>
+                <span class="stock-change negative">Total Change: <strong style="margin-left: 32px;">-₹360.00</strong></span>
+            </div>
+            <div class="stock-card" style="background: rgb(255, 205, 205);">
+                <span class="stock-name">Wipro</span>
+                <span class="stock-quantity">Quantity: 16</span>
+                <span class="avg-price">Avg. Price: ₹450</span>
+                <span class="current-value">Current Value: ₹430</span>
+                <span class="stock-change negative">Total Change: <strong style="margin-left: 32px;">-₹320.00</strong></span>
+            </div>
+            <div class="stock-card" style="background: rgb(216, 248, 216);">
+                <span class="stock-name">HDFC Bank</span>
+                <span class="stock-quantity">Quantity: 3</span>
+                <span class="avg-price">Avg. Price: ₹1,600</span>
+                <span class="current-value">Current Value: ₹1,690</span>
+                <span class="stock-change positive">Total Change: <strong style="margin-left: 30px;">+₹270.00</strong></span>
+            </div>
+        </div>
+    </main>
+    
+    
+    
+    
+    
+    
+        
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Investify</h4>
+                <p>Your trusted investment platform.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="watchlist.html">Watchlist</a></li>
+                    <li><a href="transactions.html">Transactions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: support@investify.com</p>
+                <p>Phone: +91 1111111111</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Investify. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="portfolio.js"></script>
+</body>
+
+</html>
