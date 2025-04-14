@@ -7,7 +7,7 @@ if (!isLoggedIn || isLoggedIn !== "true") {
 }
 
 // Display the user's name
-var userName = localStorage.getItem("name") || "User"; // Fetch the user's name from localStorage
+var userName = localStorage.getItem("name"); // Fetch the user's name from localStorage
 var welcomeText = document.getElementById("welcomeText");
 welcomeText.textContent = `Welcome, ${userName}!`;
 
@@ -18,7 +18,7 @@ document.getElementById("logoutBtn").onclick = function () {
     window.location.href = "index.html"; // Redirect to index page
 };
 
-// Intercept the browser back button
+// Prevents Users from Using the Browser's Back Button to Re-enter
 window.onpopstate = function (event) {
     if (!localStorage.getItem("isLoggedIn")) { 
         alert("You need to login to access the website."); // Show the message

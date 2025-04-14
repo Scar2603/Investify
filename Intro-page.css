@@ -163,7 +163,7 @@ nav {
     left: 50%; /* Horizontally centered */
     transform: translate(-50%, -50%); /* Adjust to center accurately */
     padding: 30px;
-    width: 90%;
+    width: 100%;
     max-width: 450px;
     border-radius: 15px; /* Softer corners */
     text-align: center;
@@ -214,7 +214,7 @@ nav {
     font-size: 18px;
     color: #333; /* Slight gray for readability */
     margin-bottom: 10px;
-}
+}   
 
 /* Buttons Styling */
 #loginpopup .popup-content button,
